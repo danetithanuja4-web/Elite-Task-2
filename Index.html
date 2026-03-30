@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio showcasing projects, skills, and contact information." />
+    <title>My Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-cxNjfaZqAIMIGvTGjJH2xBshX/rqStYwUOBN0x1yWfdijOTZBVrPzPY/zQHWd7T5j0meDjWkA6zrTxZeNZcT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-O3H6rX1mM7qKaZaW1FZRAfSDcLkYAjHCZ7YxR1tFhbgVHoz/Y99Pk0oIpWZjBnalcEr0ArpM0Qe8LbU6cFswUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Three.js for background canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r155/three.min.js" integrity="sha512-9o5+HPa3LT64VJf2a7C1NOyG/tw9f4mKLMDRd733gQmW8LRc0N2i+u+6FNsyFbFGmiW4Q3EXhvx3WXvvfo9OeA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  </head>
+  <body>
+    <header class="top-nav" id="top-nav">
+      <div class="container header-inner">
+        <a class="brand" href="#home">MyPortfolio</a>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+          <p class="hero-subtitle">Hi, I'm</p>
+          <h1 class="hero-title">
+            Alex<br />Web Developer
+          </h1>
+          <p class="hero-copy">
+            I build modern, accessible web experiences with animation, performance, and delight in mind.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn secondary" href="#contact">Let's Talk</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>Who I Am</h3>
+              <p>
+                I’m a front-end developer passionate about modern interfaces, smooth interactions, and writing
+                clean, maintainable code.
+              </p>
+            </div>
+            <div class="card">
+              <h3>What I Build</h3>
+              <p>
+                From landing pages to web apps, I focus on performance, accessibility, and delightful micro-interactions.
+              </p>
+            </div>
+            <div class="card">
+              <h3>How I Work</h3>
+              <p>
+                I love collaborating, shipping quickly, and using animation where it helps users understand and engage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="projects">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="project-grid">
+            <article class="project">
+              <div class="project__thumb" aria-hidden="true"></div>
+              <div class="project__content">
+                <h3>Design System Hub</h3>
+                <p>
+                  A modular component library with theming, accessibility patterns, and interactive documentation.
+                </p>
+                <div class="project__tags">
+                  <span>React</span><span>TypeScript</span><span>GSAP</span>
+                </div>
+                <a class="project__link" href="#">Explore</a>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project__thumb" aria-hidden="true"></div>
+              <div class="project__content">
+                <h3>Interactive Data Explorer</h3>
+                <p>
+                  A performance-first dashboard that visualizes data with animated transitions and filters.
+                </p>
+                <div class="project__tags">
+                  <span>D3</span><span>Vue</span><span>Canvas</span>
+                </div>
+                <a class="project__link" href="#">Explore</a>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project__thumb" aria-hidden="true"></div>
+              <div class="project__content">
+                <h3>3D Portfolio</h3>
+                <p>
+                  A immersive portfolio built with Three.js and smooth scroll animations powered by GSAP.
+                </p>
+                <div class="project__tags">
+                  <span>Three.js</span><span>GSAP</span><span>WebGL</span>
+                </div>
+                <a class="project__link" href="#">Explore</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            <div class="skill">
+              <h3>Front-end</h3>
+              <ul>
+                <li>HTML & CSS (Flexbox / Grid)</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Responsive Design</li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3>Animation</h3>
+              <ul>
+                <li>GSAP & ScrollTrigger</li>
+                <li>CSS keyframes and transitions</li>
+                <li>Three.js & WebGL</li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3>Tooling</h3>
+              <ul>
+                <li>Git & CI</li>
+                <li>Performance tuning</li>
+                <li>Accessible experiences</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="contact">
+        <div class="container">
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Say hello</h3>
+              <p>
+                Want to collaborate? Send a note and let’s build something great.
+              </p>
+              <a class="btn outline" href="mailto:hello@example.com">Email me</a>
+            </div>
+            <form class="contact-form" action="#" onsubmit="return false;">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Tell me about your project" required></textarea>
+              </div>
+              <button class="btn primary" type="submit">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> MyPortfolio — Built with HTML, CSS, JavaScript, GSAP & Three.js</p>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
